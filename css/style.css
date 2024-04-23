@@ -22,7 +22,7 @@
     --nav-current-page-bkg-color: #3AA992;
     --nav-text-color: #05332a;
     --nav-text-hover-color: #790C22;
-    --people-name: #FF0000;
+    /* --people-name: #FF0000;  it will be styled with bold and underlining instead*/
 
     /*gray palette*/
     --dark-gray: #333;
@@ -52,6 +52,11 @@ h2 {
     /*  Removed because it imparis readibility */
     /* -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: black; */
+}
+
+p {
+    line-height: 1.8em;
+    text-indent: 32px;
 }
 
 .skip-to-content-link {
@@ -92,7 +97,6 @@ header>nav {
     justify-content: center;
     width: 100%;
     margin: 0px;
-
 }
 
 header>nav>ul {
@@ -113,6 +117,11 @@ header>nav>ul>li {
 }
 
 header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     color: var(--nav-text-color);
     text-decoration: none;
     font-weight: 600;
@@ -122,8 +131,8 @@ header li:hover {
     background-color: var(--nav-text-hover-color);
 }
 
-header li:hover a{
-    color:white;
+header li:hover a {
+    color: white;
     background-color: var(--nav-text-hover-color);
 }
 
@@ -147,7 +156,6 @@ header li.active {
     justify-content: center;
     min-height: 192px;
     margin-top: 8px;
-
 }
 
 .heading-container>.header-background {
@@ -162,20 +170,21 @@ header li.active {
 
 .heading-container>.content {
     position: absolute;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 192px;
-   
+
     margin-top: 8px;
 }
 
 .heading-container>.content>h1 {
     color: var(--nav-text-color);
     font-size: 2em;
+    text-align: center;
     font-weight: bold;
-    padding: 16px; 
-    color:black;   
+    padding: 16px;
+    color: black;
 
 }
 
@@ -200,6 +209,11 @@ main {
 }
 
 
+.names {
+    font-weight: bold;
+    text-decoration: underline;
+
+}
 
 blockquote {
     border-left: 8px solid #790C22;
@@ -216,6 +230,26 @@ blockquote {
 
 .image-container figcaption {
     text-align: center;
+    font-style: italic;
+    color:var(--dark-gray);
+}
+
+.book-styled-list {
+
+    list-style-image: url("../images/e-book.png");
+    line-height: 1.8em;
+}
+
+.earth-styled-list {
+
+    list-style-image: url("../images/world.png");
+    line-height: 1.8em;
+}
+
+
+.references>div {
+    border-left: 4px solid #790C22;
+    margin-left: 4em;
 }
 
 
