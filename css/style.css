@@ -3,25 +3,21 @@
 
 
 :root {
-    /*Default palette*/
-    /*  --body-bkg-color: #f3f3f3;
-    --nav-bkg-color: #0d7963; */
-    /*should be lighter*/
-    /*  --nav-current-page-bkg-color: #3AA992; */
-    /*should be "active"*/
-    /*  --nav-text-color: #CCECE6; */
-    /*should be darker the bg color*/
-    /*  --nav-text-hover-color: #790C22; */
-    /**/
-    /*  --people-name: #FF0000; */
-    /*cannot be red*
+    /*Proposed palette*/
+   /*  --body-bkg-color: #f3f3f3;
+    --nav-bkg-color: #0d7963;
+    --nav-current-page-bkg-color: #3AA992;
+    --nav-text-color: #CCECE6;
+    --nav-text-hover-color: #790C22;
+    --people-name: #FF0000;  */
+  
 
-    /*Palette 1*/
-    --body-bkg-color: #f3f3f3;
+    /*Palette 1 OK*/
+    --body-bkg-color: #F3EADA;
     --nav-bkg-color: #CCECE6;
     --nav-current-page-bkg-color: #3AA992;
     --nav-text-color: #05332a;
-    --nav-text-hover-color: #790C22;
+    --nav-text-hover-color: #5282d0;
     /* --people-name: #FF0000;  it will be styled with bold and underlining instead*/
 
     /*gray palette*/
@@ -29,7 +25,18 @@
     --medium-gray: #666;
     --light-gray: #ddd;
 
+    --shadow: 10px 10px 10px var(--medium-gray);
+
+    /*Palette 2*/
+    /* --body-bkg-color: #F3EADA;
+    --nav-bkg-color: #85b848;
+    --nav-current-page-bkg-color: #3AA992;
+    --nav-text-color: #2F4858;
+    --nav-text-hover-color: #5282d0;
+ */
 }
+
+
 
 * {
     box-sizing: border-box;
@@ -48,6 +55,8 @@ body {
 h2 {
     color: var(--nav-text-color);
     font-weight: bold;
+    font-size: 3em;
+    margin: 0px;
 
     /*  Removed because it imparis readibility */
     /* -webkit-text-stroke-width: 3px;
@@ -154,7 +163,7 @@ header li.active {
 .heading-container {
     display: flex;
     justify-content: center;
-    min-height: 192px;
+    min-height: 232px;
     margin-top: 8px;
 }
 
@@ -162,7 +171,7 @@ header li.active {
     position: absolute;
     background-image: url('../images/fondo.png');
     background-size: cover;
-    min-height: 192px;
+    min-height: 232px;
     width: 100%;
     opacity: 0.3;
 }
@@ -172,19 +181,20 @@ header li.active {
     position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     min-height: 192px;
-
     margin-top: 8px;
 }
 
 .heading-container>.content>h1 {
     color: var(--nav-text-color);
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
     font-weight: bold;
     padding: 16px;
     color: black;
+    margin: 0px;
 
 }
 
@@ -210,12 +220,27 @@ main {
 
 
 .names {
-    font-weight: bold;
+    font-weight: 900;
     text-decoration: underline;
+    text-underline-offset: 4px;
+    color: #1D8288;
+}
 
+.bold {
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.giant {
+    font-size: 3em;
+    color: var(--medium-gray);
+    font-style: italic;
 }
 
 blockquote {
+    text-align: right;
+    font-style: italic;
     border-left: 8px solid #790C22;
     padding: 32px;
     color: var(--nav-text-color);
@@ -228,26 +253,29 @@ blockquote {
     justify-content: center;
 }
 
+.image-container img {
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+}
+
 .image-container figcaption {
     text-align: center;
     font-style: italic;
-    color:var(--dark-gray);
+    color: var(--dark-gray);
 }
 
 .book-styled-list {
-
     list-style-image: url("../images/e-book.png");
     line-height: 1.8em;
 }
 
 .earth-styled-list {
-
     list-style-image: url("../images/world.png");
     line-height: 1.8em;
 }
 
 
-.references>div {
+.references>.references>div {
     border-left: 4px solid #790C22;
     margin-left: 4em;
 }
