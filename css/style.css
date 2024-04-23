@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root {
+    /*Default palette*/
+    /*  --body-bkg-color: #f3f3f3;
+    --nav-bkg-color: #0d7963; */
+    /*should be lighter*/
+    /*  --nav-current-page-bkg-color: #3AA992; */
+    /*should be "active"*/
+    /*  --nav-text-color: #CCECE6; */
+    /*should be darker the bg color*/
+    /*  --nav-text-hover-color: #790C22; */
+    /**/
+    /*  --people-name: #FF0000; */
+    /*cannot be red*
+
+    /*Palette 1*/
+    --body-bkg-color: #f3f3f3;
+    --nav-bkg-color: #CCECE6;
+    --nav-current-page-bkg-color: #3AA992;
+    --nav-text-color: #05332a;
+    --nav-text-hover-color: #790C22;
+    --people-name: #FF0000;
+
+    /*gray palette*/
+    --dark-gray: #333;
+    --medium-gray: #666;
+    --light-gray: #ddd;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Alice', sans-serif;
+    background-color: var(--body-bkg-color);
+    margin: 0;
+    padding: 0;
+
+
+
+}
+
+h2 {
+    color: var(--nav-text-color);
+    font-weight: bold;
+
+    /*  Removed because it imparis readibility */
+    /* -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black; */
+}
+
+.skip-to-content-link {
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+.skip-to-content-link {
+    background: var(--nav-bkg-color);
+    height: 30px;
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+
+.skip-to-content-link:focus {
+    transform: translateY(0%);
+}
+
+
+header {
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding: 0px;
+
+
+}
+
+header>nav {
+    background-color: var(--nav-bkg-color);
+    color: var(--nav-text-color);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+
+}
+
+header>nav>ul {
+    display: flex;
+    list-style-type: none;
+    gap: 16px;
+    padding: 0px;
+    margin: 0px;
+}
+
+header>nav>ul>li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 144px;
+    min-height: 32px;
+
+}
+
+header a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header li:hover {
+    background-color: var(--nav-text-hover-color);
+}
+
+header li:hover a{
+    color:white;
+    background-color: var(--nav-text-hover-color);
+}
+
+header a:focus {
+    text-decoration: underline;
+}
+
+.active {
+    background-color: var(--nav-current-page-bkg-color);
+
+}
+
+header li.active {
+    height: 100%;
+    width: 100%;
+}
+
+
+.heading-container {
+    display: flex;
+    justify-content: center;
+    min-height: 192px;
+    margin-top: 8px;
+
+}
+
+.heading-container>.header-background {
+    position: absolute;
+    background-image: url('../images/fondo.png');
+    background-size: cover;
+    min-height: 192px;
+    width: 100%;
+    opacity: 0.3;
+}
+
+
+.heading-container>.content {
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 192px;
+   
+    margin-top: 8px;
+}
+
+.heading-container>.content>h1 {
+    color: var(--nav-text-color);
+    font-size: 2em;
+    font-weight: bold;
+    padding: 16px; 
+    color:black;   
+
+}
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-gray);
+    padding: 8px;
+
+}
+
+.main-article {
+    max-width: 1200px;
+    background-color: var(--body-bkg-color);
+    padding: 2em;
+    border-radius: 32px;
+}
+
+
+
+blockquote {
+    border-left: 8px solid #790C22;
+    padding: 32px;
+    color: var(--nav-text-color);
+    background: rgb(225, 236, 234);
+    background: linear-gradient(140deg, rgba(225, 236, 234, 1) 30%, rgba(204, 236, 230, 1) 74%, rgba(58, 169, 146, 1) 98%);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container figcaption {
+    text-align: center;
+}
+
+
+
+footer {
+    background-color: var(--nav-bkg-color);
+    padding: 2em;
+}
+
+footer p {
+    color: var(--nav-text-color);
+    text-align: center;
+    margin-top: 0px;
+}
